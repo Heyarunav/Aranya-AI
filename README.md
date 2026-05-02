@@ -18,7 +18,6 @@ We are forging a computer vision pipeline designed to identify medicinal plants 
 * [ ] Implement Vision Model via Python
 * [ ] Deploy Streamlit Web Interface
 
-## The Team
+## The Devloper
 * Arunav Kalita 
-* Prahlad Sen
-* Bitopan Kalita
+
