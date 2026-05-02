@@ -1,4 +1,5 @@
 # Aranya-AI: Medicinal Botanical Identification
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Aranya_AI-green?style=for-the-badge)](https://aranya-ai.streamlit.app/)
 
 ## The Vision
 The North Eastern Region harbors immense biodiversity, yet tracking and protecting valuable medicinal flora remains a profound challenge. Aranya-AI bridges traditional ecological knowledge with modern computation.
