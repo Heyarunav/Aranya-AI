@@ -3,7 +3,7 @@ from PIL import Image
 import time
 import random
 
-# 1. The Pan-India Database: Now supporting multiple states and languages!
+
 plant_database = {
     "Manimuni": {
         "scientific": "Centella asiatica",
