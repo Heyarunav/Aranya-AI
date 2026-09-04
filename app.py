@@ -66,16 +66,16 @@ plant_database = {
 st.set_page_config(page_title="Aranya-AI", layout="centered")
 st.title("🌿 Aranya-AI: Pan-India Botanical Identifier")
 
-# 2. Dynamic User Profile & GPS Controls for the Demo
+
 st.sidebar.header("⚙️ Live Demo Controls")
 
-# List of all supported states in our prototype
+
 states_list = ["Assam", "Manipur", "West Bengal", "Bihar / North India", "Maharashtra", "Tamil Nadu", "Kerala"]
 
-# The user's actual registered home state
+
 user_home_state = st.sidebar.selectbox("👤 User's Home Profile:", states_list, index=1) # Defaults to Manipur for demo
 
-# Where the user is currently standing with their camera
+
 simulated_gps = st.sidebar.selectbox("📍 Simulated GPS Location:", states_list, index=5) # Defaults to Tamil Nadu for demo
 
 st.write(f"**Current Scanner Location:** {simulated_gps}")
@@ -104,7 +104,7 @@ if image_to_analyze is not None:
             
         detected_plant = None
         
-        # The smart file name trick
+
         if "aloe" in file_name:
             detected_plant = "Aloe Vera"
         elif "neem" in file_name:
@@ -118,19 +118,19 @@ if image_to_analyze is not None:
         
         plant_info = plant_database[detected_plant]
         
-        # Fetching names based on the sidebar selections
+
         local_name = plant_info["regional_names"][simulated_gps]
         home_name = plant_info["regional_names"][user_home_state]
         
         st.success("Analysis Complete!")
         
-        # 3. Displaying the Core Information
+
         st.subheader("Identification Results:")
         st.write(f"**English Name:** {plant_info['english']}")
         st.write(f"**Scientific Name:** *{plant_info['scientific']}*")
         st.write(f"**Local Name Here ({simulated_gps}):** {local_name}")
         
-        # 4. The Cross-Cultural "Home Connection"
+
         if simulated_gps != user_home_state:
             st.info(f"🏠 **Home Connection:** Back in **{user_home_state}**, you know this plant as **{home_name}**.")
         
